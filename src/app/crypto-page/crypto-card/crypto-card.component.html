@@ -1,0 +1,76 @@
+<!-- <p>crypto-card works!</p> -->
+
+<li
+  class="commodity crypto-card"
+  id=""
+  [ngClass]="{ currency: currency === 'ETH' }"
+>
+  <h2 class="commodity__name">ethereum</h2>
+  <img
+    class="commodity__pic"
+    src="./assets/images/png/ethereum_shdw.png"
+    alt=""
+  />
+  <table class="commodity__props">
+    <tr class="field price">
+      <td class="field__name field__name--price">price</td>
+      <td class="field__value" data-set="last">{{ marketData?.last }}</td>
+    </tr>
+    <tr class="field price">
+      <td class="field__name field__name--percent">percent change</td>
+      <td class="field__value toggle percent-on">
+        <label class="switch" onclick="updateChange('ETH')">
+          <input type="checkbox" /> <span class="slider round"></span>
+        </label>
+      </td>
+    </tr>
+    <tr class="field price">
+      <td class="field__name field__name--secondary">hour change</td>
+      <td
+        class="field__value"
+        data-set="hour"
+        [ngClass]="{
+          'field__value--negative': marketData.changes.price.hour < 0
+        }"
+      >
+        {{ marketData?.changes.price.hour }}
+      </td>
+    </tr>
+    <tr class="field price">
+      <td class="field__name field__name--secondary">day change</td>
+      <td
+        class="field__value"
+        data-set="day"
+        [ngClass]="{
+          'field__value--negative': marketData.changes.price.day < 0
+        }"
+      >
+        {{ marketData?.changes.price.day }}
+      </td>
+    </tr>
+    <tr class="field price">
+      <td class="field__name field__name--secondary">week change</td>
+      <td
+        class="field__value"
+        data-set="week"
+        [ngClass]="{
+          'field__value--negative': marketData.changes.price.week < 0
+        }"
+      >
+        {{ marketData?.changes.price.week }}
+      </td>
+    </tr>
+    <tr class="field price">
+      <td class="field__name field__name--secondary">month change</td>
+      <td
+        class="field__value"
+        data-set="month"
+        [ngClass]="{
+          'field__value--negative': marketData.changes.price.month < 0
+        }"
+      >
+        {{ marketData?.changes.price.month }}
+      </td>
+    </tr>
+  </table>
+</li>

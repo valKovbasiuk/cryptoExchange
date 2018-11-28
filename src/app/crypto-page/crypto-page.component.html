@@ -1,0 +1,25 @@
+<div class="header container">
+  <div class="title">
+    <span class="title__text"> Select currency to exchange: </span>
+  </div>
+  <select
+    class="currencies"
+    name="currencySelect"
+    id="currency-select"
+    (change)="setCurrency($event)"
+  >
+    <option class="uppercase" value="USD" selected="selected">USD</option>
+    <option class="uppercase" value="EUR">EUR</option>
+    <option class="uppercase" value="RUB">RUB</option>
+    <option class="uppercase" value="GBP">GBP</option>
+  </select>
+</div>
+
+<div class="commodities">
+  <div class="container">
+    <app-crypto-card [marketData]="ethData" currency="ETH"></app-crypto-card>
+    <app-crypto-card [marketData]="ltcData" currency="LTC"></app-crypto-card>
+    <app-crypto-card [marketData]="btcData" currency="BTC"></app-crypto-card>
+    <!-- <app-crypto-card *ngFor="let coin of coins"></app-crypto-card> -->
+  </div>
+</div>
