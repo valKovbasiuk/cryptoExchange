@@ -18,15 +18,15 @@ export class CryptoPageComponent implements OnInit {
 
   ngOnInit() {
     this._httpCoinDataService.getData('BTC').subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.btcData = res;
     });
     this._httpCoinDataService.getData('ETH').subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.ethData = res;
     });
     this._httpCoinDataService.getData('LTC').subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.ltcData = res;
     });
   }
