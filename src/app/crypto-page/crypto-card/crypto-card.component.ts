@@ -12,11 +12,11 @@ export class CryptoCardComponent implements OnInit {
   public priceOrPercent: string = 'price';
 
   percentToggle(event) {
-    console.log(event.target.checked);
+    // console.log(event.target.checked);
     event.target.checked
       ? ((this.percentage = '%'), (this.priceOrPercent = 'percent'))
       : ((this.percentage = ''), (this.priceOrPercent = 'price'));
-    console.log(this.priceOrPercent);
+    // console.log(this.priceOrPercent);
   }
 
   @Input() currency: string;

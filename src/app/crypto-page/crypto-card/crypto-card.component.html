@@ -1,6 +1,6 @@
 <!-- <p>crypto-card works!</p> -->
 
-<li class="commodity crypto-card" id="" [ngClass]="{ currency: currency === 'ETH' }">
+<li class="commodity crypto-card" [ngClass]="currency">
   <h2 class="commodity__name">ethereum</h2>
   <img class="commodity__pic" src="./assets/images/png/ethereum_shdw.png" alt="" />
   <table class="commodity__props">
@@ -23,7 +23,7 @@
         class="field__value"
         data-set="hour"
         [ngClass]="{
-          'field__value--negative': marketData.changes.price.hour < 0
+          'field__value--negative': marketData?.changes.price.hour < 0
         }"
       >
         {{ currencySign }} {{ (marketData?.changes)[priceOrPercent].hour }}{{ percentage }}
@@ -35,7 +35,7 @@
         class="field__value"
         data-set="day"
         [ngClass]="{
-          'field__value--negative': marketData.changes.price.day < 0
+          'field__value--negative': marketData?.changes.price.day < 0
         }"
       >
         {{ currencySign }}{{ (marketData?.changes)[priceOrPercent].day }}{{ percentage }}
@@ -47,7 +47,7 @@
         class="field__value"
         data-set="week"
         [ngClass]="{
-          'field__value--negative': marketData.changes.price.week < 0
+          'field__value--negative': marketData?.changes.price.week < 0
         }"
       >
         {{ currencySign }} {{ (marketData?.changes)[priceOrPercent].week }}{{ percentage }}
@@ -59,7 +59,7 @@
         class="field__value"
         data-set="month"
         [ngClass]="{
-          'field__value--negative': marketData.changes.price.month < 0
+          'field__value--negative': marketData?.changes.price.month < 0
         }"
       >
         {{ currencySign }} {{ (marketData?.changes)[priceOrPercent].month }}{{ percentage }}
