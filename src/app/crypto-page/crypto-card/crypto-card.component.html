@@ -26,7 +26,7 @@
           'field__value--negative': marketData.changes.price.hour < 0
         }"
       >
-        {{ currencySign }} {{ marketData?.changes.price.hour }} {{ percentage }}
+        {{ currencySign }} {{ (marketData?.changes)[priceOrPercent].hour }}{{ percentage }}
       </td>
     </tr>
     <tr class="field price">
@@ -38,7 +38,7 @@
           'field__value--negative': marketData.changes.price.day < 0
         }"
       >
-        {{ currencySign }}{{ marketData?.changes.price.day }}{{ percentage }}
+        {{ currencySign }}{{ (marketData?.changes)[priceOrPercent].day }}{{ percentage }}
       </td>
     </tr>
     <tr class="field price">
@@ -50,7 +50,7 @@
           'field__value--negative': marketData.changes.price.week < 0
         }"
       >
-        {{ currencySign }} {{ marketData?.changes.price.week }}{{ percentage }}
+        {{ currencySign }} {{ (marketData?.changes)[priceOrPercent].week }}{{ percentage }}
       </td>
     </tr>
     <tr class="field price">
@@ -62,7 +62,7 @@
           'field__value--negative': marketData.changes.price.month < 0
         }"
       >
-        {{ currencySign }} {{ marketData?.changes.price.month }}{{ percentage }}
+        {{ currencySign }} {{ (marketData?.changes)[priceOrPercent].month }}{{ percentage }}
       </td>
     </tr>
   </table>
