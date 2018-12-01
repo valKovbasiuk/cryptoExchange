@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpCoinDataService } from '../http-coin-data.service';
 // import { coins } from "./crypto-card/crypto-card.component";
 
@@ -18,20 +18,27 @@ export class CryptoPageComponent implements OnInit {
 
   ngOnInit() {
     this._httpCoinDataService.getData('BTC').subscribe(res => {
-      // console.log(res);
       this.btcData = res;
     });
     this._httpCoinDataService.getData('ETH').subscribe(res => {
-      // console.log(res);
       this.ethData = res;
     });
     this._httpCoinDataService.getData('LTC').subscribe(res => {
-      // console.log(res);
       this.ltcData = res;
     });
   }
 
+  @Input() cryptoCode;
+
   setCurrency(event) {
-    console.log(event);
+    this._httpCoinDataService.getData('BTC', event.target.value).subscribe(res => {
+      this.btcData = res;
+    });
+    this._httpCoinDataService.getData('ETH', event.target.value).subscribe(res => {
+      this.ethData = res;
+    });
+    this._httpCoinDataService.getData('LTC', event.target.value).subscribe(res => {
+      this.ltcData = res;
+    });
   }
 }
