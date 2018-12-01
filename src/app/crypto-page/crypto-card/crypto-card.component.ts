@@ -11,6 +11,12 @@ export class CryptoCardComponent implements OnInit {
   public currencySign: string;
   public priceOrPercent: string = 'price';
 
+  public crypto = {
+    BTC: {
+      img_url: './assets/images/png/ethereum_shdw.png'
+    }
+  };
+
   percentToggle(event) {
     // console.log(event.target.checked);
     event.target.checked
