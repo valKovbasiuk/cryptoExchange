@@ -19,7 +19,7 @@ export class CryptoCardComponent implements OnInit {
     // console.log(this.priceOrPercent);
   }
 
-  @Input() currency: string;
+  @Input() cryptoCode: string;
   @Input() marketData: any;
 
   constructor() {}
