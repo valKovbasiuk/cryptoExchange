@@ -13,7 +13,16 @@ export class CryptoCardComponent implements OnInit {
 
   public crypto = {
     BTC: {
+      title: 'Bitcoin',
+      img_url: './assets/images/png/bitcoin_shdw.png'
+    },
+    ETH: {
+      title: 'Ethereum',
       img_url: './assets/images/png/ethereum_shdw.png'
+    },
+    LTC: {
+      title: 'Litecoin',
+      img_url: './assets/images/png/litecoin_shdw.png'
     }
   };
 

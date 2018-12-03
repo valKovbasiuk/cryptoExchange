@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main {
@@ -76,8 +76,7 @@
   }
 }
 
-.ETH,
-.crypto-card {
+.ETH {
   background-position: 0 0;
   background-color: rgb(32, 76, 52);
   background-image: url(./assets/images/png/ethereum_bgrnd.png);
@@ -150,7 +149,7 @@
     letter-spacing: normal;
     text-align: right;
     color: #70c446;
-    &[data-set="last"] {
+    &[data-set='last'] {
       font-family: Roboto;
       font-size: 21.5px;
       font-weight: bold;
@@ -192,7 +191,7 @@
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   background-image: url(./assets/images/png/toggle.png);
   background-position: center;
   height: 22px;
